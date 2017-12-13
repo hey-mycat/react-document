@@ -50,7 +50,6 @@ npm start
 
 ### Installing React
 
-
 >`Note
         如果你安装了它，我们强烈建议你设置一个生产建立过程，来确保你在生产过程中使用的是(the fast version of React)最新的react版本`
 
@@ -67,22 +66,19 @@ npm init
 npm install --save react react-dom
 ```
 yarn和npm下载的react包都来自[npm注册表](https://www.npmjs.com/)
-
-
+---------------------------------------------------------------------------------
 ### Enabling ES6 and JSX
-
 
 我们建议您使用[Babel](http://babeljs.io/)来让你能在javascript代码中使用ES6和JSX。ES6是javaScript的新特性，让你的开发更加轻松。JSX是javaScript语言的一种扩展，能很好的配合react，让你获得更优的开发体验。
 
 [Babel配置说明](https://babeljs.io/docs/setup/)介绍了如何在不同的环境下配置Babel。确认一下你已经安装过`babel-preset-react`，还有`babel-preset-env`，并且确保它们在你的`.babelrc`这个配置文件中。让我们继续。
-
-
+---------------------------------------------------------------------------------------------------------
 ### Hello World with ES6 and JSX
-
 
 我们建议您使用打包工具，如`webpack`或者`Browserify`。它可以让你的代码模块化，然后将你编写的代码打包到一个小包里，优化加载时间。
 
-这儿有一个react的小例子：
+>这儿有一个react的小例子：
+
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -92,20 +88,20 @@ ReactDOM.render(
     document.getElementById('root')
 );
 ```
+
 这段代码呈现在一个id为"root"的DOM元素里，所以你的HTML文件里需要一个这样的元素`<div id="root"></div>`。
 
 同样，你也可以在你的现有的用任何javscript UI组件库编写的应用程序里的，随便哪儿的DOM元素中渲染一个react组件。
 
 [Learn more about integrating React width existing code。]()
-
+---------------------------------------------------------------------------------------------------------
 ### Development and Production Versions
-
 
 React默认包含许多有帮助的警告⚠️。这些警告在我们的开发过程中非常有用。
 
 `不过，这些警告让我们的React开发版本更大，更慢，所以当你要部署app时，请使用线上版本。`
 
-了解[how to tell if your website is serving the right version of React`如何判断你的网站是否提供正确的react版本`]()，怎么建立最有效的生产流程：
+>了解[how to tell if your website is serving the right version of React`如何判断你的网站是否提供正确的react版本`]()。怎么建立最有效的生产流程：
 
 * [使用`create react app`来创建生产版本]()
 * [使用`Single-File Builds`来创建生产版本]()
@@ -114,33 +110,38 @@ React默认包含许多有帮助的警告⚠️。这些警告在我们的开发
 * [使用`Rollup`来创建生产版本]()
 * [使用`webpack`来创建生产版本]()
 
-
+--------------------------------------------------------------
 ### Using a CDN
 
+>如果你不想使用npm去管理你的包，`react`和`react-dom`的npm包也支持你在`UMD`文件夹中采用single-file(单文件模式)来使用它们。如下使用CDN的例子:
 
-如果你不想使用npm去管理你的包，`react`和`react-dom`的npm包也支持你在`UMD`文件夹中采用single-file(单文件模式)来使用它们。如下使用CDN的例子:
 ```javascript
 <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 ```
-以上版本只适合开发，并不适用于生产。精简的生产版本在如下的例子里：
+
+以上版本只适合开发，并不适用于生产。
+
+>精简的生产版本在如下的例子里：
+
 ```javascript
 <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
 ```
+
 想要使用具体的react版本，将版本中的数字替换掉就好。`例：v16.2.0 => v15.6.2`
 
 如果你使用Bower，可以通过react包来得到react。
-
-
+--------------------------------------------------------------------------------------------------------
 #### `Why the crossorigin Attribute?`为什么要有crossorigin这个属性
 
 
-如果您的react引自CDN，我们建议你去设置crossorigin属性，如下：
+>如果您的react引自CDN，我们建议你去设置crossorigin属性，如下：
 ```javascript
 <script crossorigin src="..."></script>
 ```
-我们建议您验证你的CDN是否设置了请求头`Access-Control-Allow-Origin: *`：
+
+>我们建议您验证你的CDN是否设置了请求头`Access-Control-Allow-Origin: *`：
 
 ![](./imgs/cdn-cors-header.png)
 
