@@ -1,10 +1,7 @@
 # Installation安装
-=====================================
-\<br>\<br>
 >> react是一个灵活的框架，可被用于各种项目。你可以用它创建一个新的应用，你也可以逐渐地将它引入到现有的代码库中，无需再进行重写。
 
->> here are a couple of ways to get start `这儿有几种方式供你去开始使用它`
----------------------------------------------------------------------------
+here are a couple of ways to get start `这儿有几种方式供你去开始使用它`
 * try react
 * create a new app
 * Add react to an existing app
