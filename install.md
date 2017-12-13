@@ -66,13 +66,13 @@ npm init
 npm install --save react react-dom
 ```
 yarn和npm下载的react包都来自[npm注册表](https://www.npmjs.com/)
----------------------------------------------------------------------------------
+
 ### Enabling ES6 and JSX
 
 我们建议您使用[Babel](http://babeljs.io/)来让你能在javascript代码中使用ES6和JSX。ES6是javaScript的新特性，让你的开发更加轻松。JSX是javaScript语言的一种扩展，能很好的配合react，让你获得更优的开发体验。
 
 [Babel配置说明](https://babeljs.io/docs/setup/)介绍了如何在不同的环境下配置Babel。确认一下你已经安装过`babel-preset-react`，还有`babel-preset-env`，并且确保它们在你的`.babelrc`这个配置文件中。让我们继续。
----------------------------------------------------------------------------------------------------------
+
 ### Hello World with ES6 and JSX
 
 我们建议您使用打包工具，如`webpack`或者`Browserify`。它可以让你的代码模块化，然后将你编写的代码打包到一个小包里，优化加载时间。
@@ -94,7 +94,7 @@ ReactDOM.render(
 同样，你也可以在你的现有的用任何javscript UI组件库编写的应用程序里的，随便哪儿的DOM元素中渲染一个react组件。
 
 [Learn more about integrating React width existing code。]()
----------------------------------------------------------------------------------------------------------
+
 ### Development and Production Versions
 
 React默认包含许多有帮助的警告⚠️。这些警告在我们的开发过程中非常有用。
@@ -110,7 +110,6 @@ React默认包含许多有帮助的警告⚠️。这些警告在我们的开发
 * [使用`Rollup`来创建生产版本]()
 * [使用`webpack`来创建生产版本]()
 
---------------------------------------------------------------
 ### Using a CDN
 
 >如果你不想使用npm去管理你的包，`react`和`react-dom`的npm包也支持你在`UMD`文件夹中采用single-file(单文件模式)来使用它们。如下使用CDN的例子:
@@ -132,9 +131,8 @@ React默认包含许多有帮助的警告⚠️。这些警告在我们的开发
 想要使用具体的react版本，将版本中的数字替换掉就好。`例：v16.2.0 => v15.6.2`
 
 如果你使用Bower，可以通过react包来得到react。
---------------------------------------------------------------------------------------------------------
-#### `Why the crossorigin Attribute?`为什么要有crossorigin这个属性
 
+#### `Why the crossorigin Attribute?`为什么要有crossorigin这个属性
 
 >如果您的react引自CDN，我们建议你去设置crossorigin属性，如下：
 ```javascript
