@@ -141,6 +141,6 @@ React默认包含许多有帮助的警告⚠️。这些警告在我们的开发
 
 >我们建议您验证你的CDN是否设置了请求头`Access-Control-Allow-Origin: *`：
 
-![](./imgs/cdn-cors-header.png)
+![](./imgs/cdn-cors-header.png)<br>
 
 这将会使您在react 16及更高的版本中有更好的[错误处理体验](https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html)。
