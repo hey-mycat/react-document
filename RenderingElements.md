@@ -26,7 +26,7 @@ reactDOM 不停地更新DOM元素，来使它和React元素相匹配。
 
 仅用React构建出来的应用通常都有一个root节点。如果将React迁移到已有的应用里，你可能会拥有很多很多相互孤立的root节点。
 
-将一个react元素渲染到root节点里，你需要使用ReactDOM.render():
+将一个react元素渲染到root节点里，需要将这两者都传递给ReactDOM.render():
 
 ```javascript
 const element = <h1>Hello, World</h1>;
