@@ -83,5 +83,5 @@ ReactDOM比较新旧两个元素以及他们的子元素，只在必要的时候
 
 尽管我们每分钟都会创建一个新的React元素来描述这个UI树，但只有这个文本内容改变的时候，才会被 React DOM 更新。
 
-// In our experience, thinking about / how the UI should look at any given moment rather than how to change it over time / eliminates a whole class of bugs.
-据我们的经验来看，思考UI在给定的时刻去展示什么比一直想着怎么让它随着时间改变要好，这样，就消除了一种类型的bug.
+// In our experience, thinking about how the UI should look at any given moment rather than how to change it over time eliminates a whole class of bugs.
+据我们的经验来看，提前想好了状态，然后再写，比边写边想要好很多。
