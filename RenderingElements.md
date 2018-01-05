@@ -77,7 +77,7 @@ setInterval(tick, 1000);
 
 ReactDOM比较新旧两个元素以及他们的子元素，只在必要的时候更新DOM，使之成为我们期待的模样。
 
-你可以铜鼓浏览器设置来校验一下[这段代码](https://codepen.io/gaearon/pen/gwoJZk?editors=0010)
+你可以通过浏览器设置来校验一下[这段代码](https://codepen.io/gaearon/pen/gwoJZk?editors=0010)
 
 ![](https://reactjs.org/granular-dom-updates-c158617ed7cc0eac8f58330e49e48224.gif)
 
