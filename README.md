@@ -6,6 +6,8 @@
 
 小仙女是不能生气的
 
+试一下git commit --amend 这个命令
+
 ## 目录
 
 ###  > Installation
