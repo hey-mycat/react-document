@@ -8,6 +8,12 @@
 
 试一下git commit --amend 这个命令
 
+这个场景，我想给两次提交变成一次提交
+
+诺，现在是第二句。
+
+现在是这样，我想再上一个提交的基础上，执行git commit --amend
+
 ## 目录
 
 ###  > Installation
