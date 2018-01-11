@@ -73,3 +73,30 @@ ReactDOM.render(
 
 ## Composing Components
 
+组件可以被别的组件引用。这让我们能抽出来他们共同的部分来写一个可附用组件。在react中，一个按钮、一个表单、一个视图等都可以被写成一个组件。
+
+比如，我们可以创建一个App组件，渲染多个Welcome组件：
+
+```javascript
+function Welcome(props) {
+    return <h1>Hello, {props.name}</h1>;
+}
+
+function App() {
+    return (
+        <div>
+            <Welcome name="Sara" />
+            <Welcome name="Cahal" />
+            <Welcome name="Edite" />
+        </dvi>
+    );
+}
+
+ReactDOM.render(
+    <App />,
+    document.getElementById('root')
+);
+```
+
+在[codePen](https://codepen.io/pen?&editors=0010)中尝试
+
