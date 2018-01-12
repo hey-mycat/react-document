@@ -62,12 +62,12 @@ ReactDOM.render(
 在[codepen](https://codepen.io/pen?&editors=0010)中尝试这段代码
 
 让我们看下这个例子都做了什么：
-1. 我们定义了一个带有<Welcome name="Sara" />的ReactDOM.render()函数
+1. 我们定义了一个带有\<Welcome name="Sara" />的ReactDOM.render()函数
 2. React调用Welcome组件，并将{name: 'Sara'}这个对象做为rops传递给Welcome组件。
 3. 我们的Welcome组件返回了\<h1>Hello, Sara\</h1>这个元素
 4. React DOM很快将这个元素渲染到页面上。
 
-> ⚠️：
+> ⚠️：<br/>
         所有组件的首字母都要大写。<br/><br/>
         react会将小写字母开头的组件解读为DOM标签。比如，<div />表示一个HTML标签，而<Welcome />表示一个组件而且要在一定范围内引用。
 
@@ -99,4 +99,40 @@ ReactDOM.render(
 ```
 
 在[codePen](https://codepen.io/pen?&editors=0010)中尝试
+
+通常，新建一个react应用在最外层会有一个App组件。
+//if you integrate React into an existing app, you might start bottom-up with a small component like Button and gradually work your way to the top of the view hierarchy.
+
+
+## Extracting Components
+
+不要害怕将组件拆分成更小的部分。
+
+思考一下下面这个Comment组件：
+
+```javascript
+function Comment(props) {
+    return (
+        <div className="Comment">
+            <div className="UserInfo">
+                <img className="Avatar" 
+                    src={props.author.avatarUrl}
+                    alt={props.author.name}
+                />
+                <div className="UserInfo-name">
+                    {props.author.name}
+                </div>
+            </div>
+            <div className="Comment-text">
+                {props.text}
+            </div>
+            <div className="Comment-date">
+                {formatDate(porps.date)}
+            </div>
+        </div>
+    );
+}
+```
+
+[在CodePen中尝试](https://codepen.io/pen?&editors=0010)
 
