@@ -1,3 +1,4 @@
+！！！！！！！待优化
 # Components and Props
 
 // Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.
@@ -135,4 +136,106 @@ function Comment(props) {
 ```
 
 [在CodePen中尝试](https://codepen.io/pen?&editors=0010)
+
+这段代码接受不了一个author（对象），text（字符串）还有date（date）,用来描述一个社交网站的评论。
+
+这个组件因为嵌套的关系可能难以改变，而且还很难复用。让我们抽出它其中的一部分写成一个组件。
+
+首先，我们抽出来Avatar。
+
+```javascript
+function Avatar(props) {
+    return (
+        <img className="Avatar"
+            src={props.user.avatarUrl}
+            alt={props.user.name}
+        />
+    );
+}
+```
+
+这个组件（Avatar）不需要关注他在哪条评论里被渲染。这也是我们为什么会给它一个更通用的名字（user而不是author）的原因。
+
+我们建议你根据组件的意义来命名，而不是根据上下文随便起个名字。
+
+现在，我们可以简化一下Comment组件了。
+
+```javascript
+function Comment(props) {
+    return (
+        <div className="Comment">
+            <div className="UserInfo">
+                <Avatar user={props.author} />
+                <div className="UserInfo-name">
+                    {props.author.name}
+                </div>
+            </div>
+            <div className="Comment-text">
+                {props.text}
+            </div>
+            <div className="Comment-date">
+                {formatDate(props.date)}
+            </div>
+        </div>
+    );
+}
+```
+
+接下来，我们给UserInfo拆出来：
+
+```javascript
+function UserInfo(props) {
+    return (
+        <div className="UserInfo">
+            <Avatar user={props.user} />
+            <div className="UserInfo-name">
+                {props.user.name}
+            </div>
+        </div>
+    );
+}
+```
+
+这让我们进一步简化了Comment组件：
+
+```javascript
+function Comment(props) {
+    return (
+        <div className="Comment">
+            <UserInfo user={props.author} />
+            <div className="Comment-text">
+                {props.text}
+            </div>
+            <div className="Comment-date">
+                {formatDate(props.date)}
+            </div>
+        </div>
+    );
+}
+```
+
+[在CodePen中尝试](https://codepen.io/pen?&editors=0010)
+
+拆组件一开始是个很痛苦的过程，但在开发大型应用中很有用。你可以根据你的ui图，将不同的UI模块拆分为组件（比如按钮，面板，作者），或者他们自身足够复杂成为一个组件再好不过了。
+
+## Props are Read-Only
+
+绝对不能修改组件的Props!!!!!!<br/>思考这个例子:
+
+```javascript
+function sum(a, b) {
+    return a + b;
+}
+```
+这类的函数叫做[纯函数]()，它没有尝试去改变它的输入，而且，同样的输入总是对应同一个输出。
+
+相反，下面这个函数不是纯函数，因为它修改了它的输入：
+
+```javascript
+function withdraw(account, amount) {
+    account.total -= amount;
+}
+```
+
+
 
