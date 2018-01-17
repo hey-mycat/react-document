@@ -237,5 +237,9 @@ function withdraw(account, amount) {
 }
 ```
 
+react很灵活，但它有一个很严格的规定：
 
+All React components must act like pure functions with respect to their props.
+组件绝对不能更改自己的props。
 
+当然哦，应用在不同的时刻所要展示的状态是不一样的。下一节，我们会介绍一个新的概念“state（状态）”。state允许组件更改自己的输出。
